@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="408dp"
+        android:layout_height="63dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/task_button_s"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10sp"
+
+            android:backgroundTint="@color/ButtonBackground"
+            android:text="@string/task_button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:cornerRadius="10sp"
+            app:strokeWidth="1sp" />
+
+        <Button
+            android:id="@+id/trecker_button_s"
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:backgroundTint="@color/ButtonBackground"
+            android:text="@string/trecker_button"
+            app:cornerRadius="10sp"
+            app:strokeWidth="1sp" />
+
+        <Button
+            android:id="@+id/settings_button_s"
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:backgroundTint="@color/ButtonBackground"
+            android:text="@string/settings_button"
+            app:cornerRadius="10sp"
+            app:strokeWidth="1sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/settings_menu_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/settings_button"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_task_button"
+        android:layout_width="379dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/add_task_button"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/TransparentButton"
+        app:cornerRadius="0sp"
+        android:alpha="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_menu_header" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
