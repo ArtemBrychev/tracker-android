@@ -11,4 +11,5 @@
     <string name="previous">Previous</string>
     <string name="TaskNameHint">Название</string>
     <string name="TaskEditHint">Начните вводить</string>
+    <string name="StatusHinter">Выберитие статус задачи</string>
 </resources>

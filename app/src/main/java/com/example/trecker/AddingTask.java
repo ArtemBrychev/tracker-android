@@ -60,7 +60,10 @@ public class AddingTask extends AppCompatActivity {
                 toSettingsActivity(v);
             }
         });
+
     }
+
+
 
     public void toTaskActivity(View v){
         Intent intent = new Intent(this, MainActivity.class);
