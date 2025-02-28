@@ -5,6 +5,11 @@
     <color name="UpperBoard">#FC3994A0</color>
     <color name="SomeTExtColor">#A1BD791A</color>
     <color name="Purple">#67267E</color>>
-    <color name="ButtonBackground">#C938BDB6</color>
+    <color name="ButtonBackground">#00FFCC</color>
     <color name="TransparentButton">#B0DBD3</color>
+    <color name="IUcolor">#FF9999</color>
+    <color name="INUcolor">#FFCC99</color>
+    <color name="NIUcolor">#9999FF</color>
+    <color name="NINUcolor">#99FFCC</color>
+    <color name="Red">#FF4450</color>
 </resources>

@@ -5,9 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddingTask">
+    tools:context=".TaskShow">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="408dp"
         android:layout_height="63dp"
         android:orientation="horizontal"
@@ -17,10 +18,11 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/task_button_ad"
+            android:id="@+id/task_button_ts"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="10sp"
+
             android:backgroundTint="@color/ButtonBackground"
             android:text="@string/task_button"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -28,7 +30,7 @@
             app:strokeWidth="1sp" />
 
         <Button
-            android:id="@+id/trecker_button_ad"
+            android:id="@+id/trecker_button_ts"
             android:layout_width="wrap_content"
             android:layout_height="63dp"
             android:layout_marginStart="10sp"
@@ -39,7 +41,7 @@
             app:strokeWidth="1sp" />
 
         <Button
-            android:id="@+id/settings_button_ad"
+            android:id="@+id/settings_button_ts"
             android:layout_width="wrap_content"
             android:layout_height="63dp"
             android:backgroundTint="@color/ButtonBackground"
@@ -48,74 +50,49 @@
             app:strokeWidth="1sp" />
     </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/return_button"
-        android:layout_width="76dp"
-        android:layout_height="31dp"
+    <TextView
+        android:id="@+id/task_name"
+        android:layout_width="284dp"
+        android:layout_height="53dp"
         android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
-
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="235dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="60dp"
-        android:ems="10"
-        android:hint="@string/TaskNameHint"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/Description"
-        android:layout_width="343dp"
-        android:layout_height="449dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="147dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.381"
-        app:layout_constraintStart_toEndOf="@+id/statusHint"
-        app:layout_constraintTop_toBottomOf="@+id/Description" />
-
     <TextView
-        android:id="@+id/statusHint"
-        android:layout_width="175dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/StatusHinter"
+        android:id="@+id/task_description"
+        android:layout_width="354dp"
+        android:layout_height="518dp"
+        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Description" />
+        app:layout_constraintTop_toBottomOf="@+id/task_name" />
 
     <Button
-        android:id="@+id/saveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/SaveButton"
-        android:backgroundTint="@color/ButtonBackground"
-        app:cornerRadius = "10sp"
+        android:id="@+id/delete_button"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="@color/Red"
+        android:text="Удалить"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statusHint" />
+        app:layout_constraintTop_toBottomOf="@+id/task_description" />
+
+    <Button
+        android:id="@+id/change_button"
+        android:layout_width="115dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="@color/ButtonBackground"
+        android:text="Изменить"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintStart_toEndOf="@+id/delete_button"
+        app:layout_constraintTop_toBottomOf="@+id/task_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
