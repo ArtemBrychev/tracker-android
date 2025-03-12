@@ -79,7 +79,7 @@ public class TaskShow extends AppCompatActivity {
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TaskManager.deletetask(currtask.getName(), currtask.getDescription());
+                TaskManager.deletetask(currtask.getName(), currtask.getDescription());
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }

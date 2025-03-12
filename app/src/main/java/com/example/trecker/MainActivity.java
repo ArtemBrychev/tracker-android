@@ -21,6 +21,7 @@ import java.io.IOException;
 import com.example.DataOperations.*;
 import com.example.UiAdditions.TaskAdaptor;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private Button taskButton, treckerButton, settingsButton;

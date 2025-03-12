@@ -20,7 +20,7 @@ public class TaskManager {
     private TaskManager(Context context) throws IOException {
         tasks = new ArrayList<Task>();
         this.context = context;
-        File tasksFile = new File(this.context.getFilesDir(), "Tasks.txt");
+        File tasksFile = new File(this.context.getFilesDir(), "Task.txt");
         if(!tasksFile.exists()) {
             FileOutputStream fon = context.openFileOutput("Tasks.txt", context.MODE_PRIVATE);
             Log.e("TaskManager", "File created");
@@ -52,7 +52,9 @@ public class TaskManager {
                 line = input.readLine();
             }
         }
-        parseString(grand.toString());
+        if((grand!=null)&&(!grand.equals(new StringBuilder("")))){
+            parseString(grand.toString());
+        }
     }
 
     public static void writeData() throws IOException{
@@ -99,7 +101,7 @@ public class TaskManager {
         }
     }
 
-/*
+
     public static int deletetask(String name, String description){
         for(int i = 0; i < tasks.size(); i++){
             String taskName = tasks.get(i).getName();
@@ -108,16 +110,13 @@ public class TaskManager {
                 tasks.remove(i);
                 try{
                     writeData();
-                    getData();
+                }catch(IOException e){
+                    Log.e("TaskManager", "Well try to save file");
                 }
-                catch(IOException e){
-                    Log.e("TaskManager", "Saving or reading tasks after deletetask went wrong");
-                }
-
                 return 0;
             }
         }
         return -1;
     }
-*/
+
 }

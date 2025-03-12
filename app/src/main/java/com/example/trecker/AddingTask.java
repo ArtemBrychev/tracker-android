@@ -103,7 +103,7 @@ public class AddingTask extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(currtask!=null){
-                    //TaskManager.deletetask(finalTaskName, finalTaskDescr);
+                    TaskManager.deletetask(finalTaskName, finalTaskDescr);
                 }
                 String name = taskName.getText().toString();
                 String description = taskDescription.getText().toString();
